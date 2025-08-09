@@ -1,11 +1,11 @@
 #include <stdio.h>
 
-
 void print1()
 {
     printf("David says , \" Programming is fun !\"\n");
     printf("Good day!");
 }
+
 void print2()
 {
     printf("David says , \" Programming is fun !\".\n");
@@ -14,6 +14,12 @@ void print2()
     printf("D:/My documents/My file\n");
     printf("\\ \\ \\ \\ Today is holiday \\ \\ \\ \\\n");
     printf("This is a triple quoted string \"\"\" This month has 30 days \"\"\"\n");
+}
+
+void print3() {
+    /*
+     Add new printf function here
+    */
 }
 
 void print() {
@@ -25,6 +31,7 @@ void print() {
             break;
         case 1:print2();
             break;
+        // Add new case here
         default:printf("Undefined index");
     }
 }

@@ -1,5 +1,16 @@
 #include <stdio.h>
 
+void printNameSurname() {
+    char name[50],surname[50];
+    printf("Please enter your name: ");
+    scanf("%s", &name);
+    printf("Please enter your surname: ");
+    scanf("%s", &surname);
+    printf(name);
+    printf(" ");
+    printf(surname);
+}
+
 void print1()
 {
     printf("David says , \" Programming is fun !\"\n");
@@ -24,12 +35,16 @@ void print3() {
 
 void print() {
     int index;
-    printf("Lutfen bir sayi girin: ");
+    printf("Please enter the index: ");
     scanf("%d", &index);
     switch (index) {
-        case 0:print1();
+        case 0:printNameSurname();
             break;
-        case 1:print2();
+        case 1:print1();
+            break;
+        case 2:print2();
+            break;
+        case 3:print3();
             break;
         // Add new case here
         default:printf("Undefined index");

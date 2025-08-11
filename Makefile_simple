@@ -1,0 +1,19 @@
+# Simple Makefile for testing STM32 code compilation
+CXX = arm-none-eabi-g++
+CXXFLAGS = -std=c++20 -Wall -Wextra -O0 -g3
+CXXFLAGS += -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16
+CXXFLAGS += -fno-exceptions -fno-rtti
+CXXFLAGS += -I.
+
+TARGET = simple_test
+SOURCES = main.cpp stm32f4xx_hal.c
+
+all: $(TARGET).elf
+
+$(TARGET).elf: $(SOURCES)
+	$(CXX) $(CXXFLAGS) $(SOURCES) -o $@
+
+clean:
+	rm -f $(TARGET).elf
+
+.PHONY: all clean
